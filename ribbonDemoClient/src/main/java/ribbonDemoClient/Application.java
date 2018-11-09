@@ -5,18 +5,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 
 /**
- * 这里需要添加@EnableConfigServer  去启动Spring cloud config server
+ * 这里需要添加@EnableDiscoveryClient  去注册中心发现服务
+ * 配置LoadBalanced注解，支持负载调用
  * @author jihaibo
  *
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@RestController
 public class Application {
 	
 	@Bean

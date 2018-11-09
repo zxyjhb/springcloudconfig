@@ -6,9 +6,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 
 /**
- * 这里需要添加@EnableConfigServer  去启动Spring cloud config server
+ * 这里需要添加@EnableEurekaServer  将项目作为注册中心去去启动
  * @author jihaibo
- *
  */
 @SpringBootApplication
 @EnableEurekaServer
