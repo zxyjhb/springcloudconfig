@@ -32,7 +32,19 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
-
+		
+		<!-- 加入断熔器处理 顾名思义就是，容灾处理，当集群或者链路中一个服务调用失败之后，需要停止该服务的访问-->
+		<!-- 这里有一个小的猜想，如果客户端调用使用了ribbon负载均衡，可能需要加入hystrix进行容灾处理 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+		
+		<!-- hystrix仪表盘，也就是界面 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+		</dependency>
 		
 	</dependencies>
 	
