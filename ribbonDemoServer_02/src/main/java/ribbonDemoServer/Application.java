@@ -32,6 +32,12 @@ public class Application {
 	 */
 	@RequestMapping("/hello")
     public String hello() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         return "Hello World! am server 02";
     }
     public static void main(String[] args) {
